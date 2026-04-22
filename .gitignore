@@ -22,7 +22,16 @@ obj/
 # Build output
 dist/
 publish/
+[Bb]in/
+[Oo]bj/
 
 # OS Specific
 .DS_Store
 Thumbs.db
+
+# MAUI/Mobile specific temporary files
+*.tmp
+*.log
+.vs/
+.nuke/
+test-results/
