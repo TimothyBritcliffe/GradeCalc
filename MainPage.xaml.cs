@@ -1,6 +1,4 @@
-﻿using Android.Widget;
-
-namespace GradeCalc;
+﻿namespace GradeCalc;
 
 public partial class MainPage : ContentPage
 {
@@ -11,9 +9,12 @@ public partial class MainPage : ContentPage
 
     private void Calculate(object sender, EventArgs e)
     {
-        string enteredGrade = TextNumGrade.Text;
-
-        int num = Convert.ToInt32(enteredGrade);
+        if (!int.TryParse(TextNumGrade.Text, out int num))
+        {
+            LetterGrade.Text = "Please enter a valid number";
+            return;
+        }
+        
         string letterGrade = "";
         if (num >= 90 && num <= 100)
         {
@@ -71,6 +72,7 @@ public partial class MainPage : ContentPage
         else
         {
             LetterGrade.Text = letterGrade;
+            return;
         }
     }
 }
