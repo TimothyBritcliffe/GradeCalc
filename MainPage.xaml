@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradeCalc.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Number Grade:"
+                   Style="{StaticResource Headline}"
+                   SemanticProperties.HeadingLevel="Level1"/>
+            <Entry x:Name="TextNumGrade"
+                   Text=""/>
+            <Button x:Name="SubmitBtn"
+                    Text="Calculate"
+                    SemanticProperties.Hint="Calculate your letter grade"
+                    Clicked="Calculate"
+                    HorizontalOptions="Fill"/>
+            <Label x:Name="LetterGrade"
+                   Text=""
+                   Style="{StaticResource Headline}"
+                   SemanticProperties.HeadingLevel="Level1"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
